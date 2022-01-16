@@ -26,4 +26,9 @@ class TodoController(val todoService: TodoService){
     fun updateTodo(@PathVariable id: Int, updateTodoCommand: UpdateTodoCommand){
         todoService.updateTodo(id, updateTodoCommand.finished)
     }
+
+    @DeleteMapping("{id}")
+    fun updateTodo(@PathVariable id: Int){
+        todoService.deleteTodo(id)
+    }
 }

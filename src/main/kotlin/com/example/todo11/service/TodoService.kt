@@ -7,4 +7,5 @@ interface TodoService{
     fun getAllTodos(): List<Todo>
     fun addTodo(todo: Todo)
     fun updateTodo(id: Int, finished: Int)
+    fun deleteTodo(id: Int)
 }

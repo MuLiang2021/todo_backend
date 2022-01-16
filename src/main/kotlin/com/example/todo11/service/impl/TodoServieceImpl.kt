@@ -24,4 +24,8 @@ class TodoServiceImpl : TodoService {
         todoMapper.updateTodo(id, finished)
     }
 
+    override fun deleteTodo(id: Int) {
+        todoMapper.deleteTodo(id)
+    }
+
 }

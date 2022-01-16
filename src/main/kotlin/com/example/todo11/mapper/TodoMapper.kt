@@ -14,7 +14,7 @@ interface TodoMapper{
     fun addTodo(todo: Todo)
     @Update("update todo set finished = #{finished} where id = #{id}")
     fun updateTodo(id: Int, finished: Int)
-    @Select("select id,text,finished from todo where id = #{id}")
-    fun getTodoById(id: Int): Todo
+    @Delete("delete from todo where id = #{id}")
+    fun deleteTodo(id: Int)
 
 }
